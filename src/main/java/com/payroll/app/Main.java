@@ -1,0 +1,3 @@
+package com.payroll.app;
+import com.payroll.db.Database; import com.payroll.ui.PayrollFrame; import javax.swing.*;
+public class Main { public static void main(String[] args){try{Database.initialize();SwingUtilities.invokeLater(()->new PayrollFrame().setVisible(true));}catch(Exception e){JOptionPane.showMessageDialog(null,"Startup failed: "+e.getMessage(),"Payroll System",JOptionPane.ERROR_MESSAGE);e.printStackTrace();}}}
